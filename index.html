@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>homework08</title>
+</head>
+<body>
+	<script>
+
+		let isPalindrome = function(number) {
+            function toReverse(number) {
+                return number.toString().split('').reverse().join('')-0;
+            }
+
+            let reversedNumber = toReverse(number);
+            let result = number + reversedNumber;
+            let reversedResult = toReverse(result);
+
+            if(result === reversedResult) {
+                return true;
+            } else {
+                return isPalindrome(result);
+            }
+        }
+
+        console.log(isPalindrome(96));
+		
+
+	</script>
+</body>
+</html>
